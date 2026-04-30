@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #050505;
+  --color-foreground: #ededed;
+  
+  --color-brand-black: #0a0a0a;
+  --color-brand-red: #dc2626;
+  --color-brand-gold: #facc15;
+  --color-brand-neon: #ff5500;
+  
+  --font-sans: var(--font-outfit), Arial, Helvetica, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+:root {
+  --background: #050505;
+  --foreground: #ededed;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism utility classes */
+@utility glass {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@utility neon-text {
+  text-shadow: 0 0 10px rgba(255, 85, 0, 0.8), 0 0 20px rgba(255, 85, 0, 0.4);
+}
+
+@utility neon-box {
+  box-shadow: 0 0 15px rgba(255, 85, 0, 0.4), inset 0 0 10px rgba(255, 85, 0, 0.1);
+}
+
+/* Hide scrollbar for clean aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5500;
+}
